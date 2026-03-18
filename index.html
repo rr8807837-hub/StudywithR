@@ -1,32 +1,60 @@
 <!DOCTYPE html>
 <div style="text-align:center; margin-bottom:00px; ">
-<img width="450" height="400" src="images\logoweb.png.png"></div>
-<h1 style="font-size:100px; text-align:center; line-height:30px; margin-top:0px;">
-  <span>STUDYwithR</span>
-</h1>
-<p style="font-size:24px; text-align:center;">StudyWithR provides subject-wise notes of Semester IV(BSC CSCS) , helping them to access clear and well-organized study materials..</p>
-
+<body>
+<div style="text-align:center;">
+<img width="150" height="100" src="images\logoweb.png.png">
+<h2 style="font-size:50px; text-align:center; line-height:30px; margin-top:0px; font: poppins;">
+STUDYwithR
+</h2>
+</div>
+<p style="font-size:24px; text-align:center;">StudyWithR provides subject-wise materials of Semester IV(BSC CSCS) , helping them to access clear and well-organized study materials..</p>
 <hr>
-<h2>SEM-IV-------BSC(hons) CSCS</h2>
-<ul class="links" style="font-size:30px;" >
-  <li><a href="cloudcomputing.html">Cloud computing</a></li>
-  <li><a href="itinfra.html">IT Infrastructure</a></li>
-  <li><a href="process.html">Process Management</a></li>
-  <li><a href="eda.html">Exploratory Data Analysis</a></li>
-  <li><a href="mongo.html">Mongo DB</a></li>
-  <li><a href="account.html">Principles Of Accounting</a></li>
-  <li><a href="english.html">Communication Skills for Employability-I,II</a></li>
-</ul>
+<section>
+    <h2>SEM-IV-------BSC(hons) CSCS</h2>
+<div class="links" style="font-size:30px; " >
+    <div class="card"><a href="cloudcomputing.html" style="font-size:25px">Virtualization and Cloud computing</a></div>
+    <div class="card"><a href="itinfra.html">IT Infrastructure Management</a></div>
+    <div class="card"><a href="process.html">Process Management</a></div>
+    <div class="card"><a href="eda.html" style="font-size:25px">Exploratory Data Analysis</a></div>
+    <div class="card"><a href="mongo.html">Mongo DB</a></div>
+    <div class="card"><a href="account.html">Principles Of Accounting</a></div>
+    <div class="card"><a href="english.html" style="font-size:20px">Communication Skills for Employability-I</a></div>
+    <div class="card"><a href="english.html" style="font-size:20px;">Communication Skills for Employability-II</a></div>
+</div>
+</section>
 <hr>
 <div style="text-align:center; margin-bottom:00px; ">
 <img src="images\giphy.gif"></div>
 <p style="font-size:24px;">NOTE:If you are opening this website on a mobile phone, PDF files may download automatically instead of opening in the browser</p>
+<footer>
+    <p>© 2026 STUDYwithR | Built with passion for students</p>
+</footer>
+</body>
+<style>
+.links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 25px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+.card {
+    display: flex; 
+    flex-direction: column;
+    background-image: url("gii.gif");
+    background-size: cover;        /* makes image fill card */
+    background-position: center;   /* centers the image */
+    background-repeat: no-repeat;
+    margin: 10px;
+    padding: 25px;
+    border-radius: 18px;
+    cursor: pointer;
+    color: white;        /* change blue to white */
+    text-decoration: none;
+}
 
+.card:hover {
+    background:yellow;
+}
 
-
-
-
-
-
-
-
+</style>
