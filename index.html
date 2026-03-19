@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <div style="text-align:center; margin-bottom:00px; ">
-<body>
+<body class="body">
 <div style="text-align:center;">
 <img width="150" height="100" src="images\logoweb.png.png">
 <h2 style="font-size:50px; text-align:center; line-height:30px; margin-top:0px; font: poppins;">
@@ -12,14 +12,14 @@ STUDYwithR
 <section>
     <h2>SEM-IV-------BSC(hons) CSCS</h2>
 <div class="links" style="font-size:30px; " >
-    <div class="card"><a href="cloudcomputing.html" style="font-size:25px">Virtualization and Cloud computing</a></div>
+    <div class="card"><a href="cloudcomputing.html" >Virtualization and Cloud computing</a></div>
     <div class="card"><a href="itinfra.html">IT Infrastructure Management</a></div>
     <div class="card"><a href="process.html">Process Management</a></div>
-    <div class="card"><a href="eda.html" style="font-size:25px">Exploratory Data Analysis</a></div>
+    <div class="card"><a href="eda.html">Exploratory Data Analysis</a></div>
     <div class="card"><a href="mongo.html">Mongo DB</a></div>
     <div class="card"><a href="account.html">Principles Of Accounting</a></div>
-    <div class="card"><a href="english.html" style="font-size:20px">Communication Skills for Employability-I</a></div>
-    <div class="card"><a href="english.html" style="font-size:20px;">Communication Skills for Employability-II</a></div>
+    <div class="card"><a href="english.html">Communication Skills for Employability-I</a></div>
+    <div class="card"><a href="english.html" >Communication Skills for Employability-II</a></div>
 </div>
 </section>
 <hr>
@@ -31,17 +31,22 @@ STUDYwithR
 </footer>
 </body>
 <style>
+.body{
+    background:radial-gradient(circle,#ff2d78,#7c3aed,#0ea5e9,#f59e0b) ;
+    background-size: 600% 600%;
+    animation:bg 1s ease infinite;
+}    
 .links {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(2, 1fr); 
     gap: 25px;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 40px auto;
 }
 .card {
     display: flex; 
     flex-direction: column;
-    background-color:pink;
+    background-color: pink;
     background-size: cover;        /* makes image fill card */
     background-position: center;   /* centers the image */
     background-repeat: no-repeat;
@@ -55,6 +60,10 @@ STUDYwithR
 
 .card:hover {
     background:yellow;
+}
+@keyframes bg{
+    0%{background-position: 0% 100%}
+    100%{background-position: 100% 0%}
 }
 
 </style>
