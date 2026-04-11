@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feedback Required</title>
+</head>
+
+<body style="text-align:center; font-family:Arial; padding:40px;">
+
+  <h2>📝 Please give feedback to continue</h2>
+
+  <!-- Your actual form -->
+  <iframe 
+    src="https://form.svhrt.com/69d1dc310ade6f5ad2b31837"
+    width="100%" 
+    height="500px"
+    style="border:none;">
+  </iframe>
+
+  <br><br>
+
+  <button onclick="goNext()" 
+    style="padding:10px 20px; font-size:18px; background:green; color:white; border:none; border-radius:5px;">
+    I Submitted Feedback ✅
+  </button>
+
+  <script>
+    function goNext() {
+      localStorage.setItem("feedbackDone", "yes");
+
+      const params = new URLSearchParams(window.location.search);
+      const redirect = params.get("redirect");
+
+      if (redirect) {
+        window.location.href = redirect;
+      } else {
+        window.location.href = "index.html";
+      }
+    }
+  </script>
+
+</body>
+</html>
