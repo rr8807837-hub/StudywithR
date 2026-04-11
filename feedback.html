@@ -18,25 +18,34 @@
 
   <br><br>
 
-  <button onclick="goNext()" 
-    style="padding:10px 20px; font-size:18px; background:green; color:white; border:none; border-radius:5px;">
-    I Submitted Feedback ✅
-  </button>
+  <br><br>
+
+<label style="font-size:18px;">
+  <input type="checkbox" id="confirmCheck">
+  I have filled and submitted the feedback form
+</label>
+
+<br><br>
+
+<button id="submitBtn" onclick="goNext()" disabled
+style="padding:10px 20px; font-size:18px; background:gray; color:white; border:none; border-radius:5px;">
+  Submit & Continue →
+</button>
 
   <script>
-    function goNext() {
-      localStorage.setItem("feedbackDone", "yes");
+const checkbox = document.getElementById("confirmCheck");
+const button = document.getElementById("submitBtn");
 
-      const params = new URLSearchParams(window.location.search);
-      const redirect = params.get("redirect");
-
-      if (redirect) {
-        window.location.href = redirect;
-      } else {
-        window.location.href = "index.html";
-      }
-    }
-  </script>
+checkbox.addEventListener("change", function() {
+  if (this.checked) {
+    button.disabled = false;
+    button.style.background = "green";
+  } else {
+    button.disabled = true;
+    button.style.background = "gray";
+  }
+});
+</script>
 
 </body>
 </html>
