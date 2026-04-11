@@ -20,9 +20,11 @@ Give Feedback</a>
     <div class="card"><a href="process.html">Process Management</a></div>
     <div class="card"><a href="eda.html">Exploratory Data Analysis</a></div>
     <div class="card"><a href="mongo.html">Mongo DB</a></div>
-    <div class="card"><a href="account.html">Principles Of Accounting</a></div>
-    <div class="card"><a href="english.html">Communication Skills for Employability-I</a></div>
-    <div class="card"><a href="english1.html" >Communication Skills for Employability-II</a></div>
+    <div class="card"><a href="#" onclick="openPage('account.html')">Principles Of Accounting</a></div>
+    <div class="card"><a href="#" onclick="openPage('english.html')">
+    Communication Skills for Employability-I</a></div>
+    <div class="card"><a href="#" onclick="openPage('english1.html')">
+    Communication Skills for Employability-II</a></div>
 </div>
 </section>
 <hr>
@@ -79,4 +81,12 @@ background: radial-gradient(circle at 50% 50%, #ff9de2, #c084fc, #67e8f9, #86efa
   gtag('js', new Date());
 
   gtag('config', 'G-0G05X8KWSS');
-</script>
+
+function openPage(page) {
+  if (localStorage.getItem("feedbackDone") === "yes") {
+    window.location.href = page;
+  } else {
+    window.location.href = "feedback.html?redirect=" + page;
+  }
+}
+</script>    
